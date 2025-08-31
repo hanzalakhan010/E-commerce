@@ -85,7 +85,7 @@ export const Login = () => {
                             <Link
                                 to="/signup"
                                 className="font-medium text-indigo-600 hover:text-indigo-500"
-                            >Sign in</Link>
+                            >Sign Up</Link>
                         </p>
                     </div>
                 </div>
