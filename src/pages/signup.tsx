@@ -41,6 +41,7 @@ export const Signup = () => {
                                         type="text"
                                         autoComplete='name'
                                         required
+                                        placeholder="Full Name"
                                         className="block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                     />
                                 </div>
@@ -55,6 +56,7 @@ export const Signup = () => {
                                     <input
                                         id="email"
                                         name="email"
+                                        placeholder="Email"
                                         type="email"
                                         autoComplete="email"
                                         required
@@ -73,6 +75,7 @@ export const Signup = () => {
                                 <div className="mt-1">
                                     <input
                                         id="password"
+                                        placeholder="Password"
                                         name="password"
                                         type="password"
                                         autoComplete="current-password"
@@ -94,6 +97,7 @@ export const Signup = () => {
                                         id="confirm-password"
                                         name="confirm-password"
                                         type="password"
+                                        placeholder="Confirm Password"
                                         autoComplete="new-password"
                                         required
                                         className="block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
