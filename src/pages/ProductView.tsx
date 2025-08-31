@@ -12,8 +12,9 @@ export const ProductView = () => {
     const dispatch = useDispatch<AppDispatch>()
 
     useEffect(() => {
-        if (!products) {
+        if (!products.length) {
             dispatch(loadProduts())
+            console.log("products")
         }
     }, [products])
     return (
