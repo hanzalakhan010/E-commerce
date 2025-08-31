@@ -1,6 +1,11 @@
-import { Link } from "react-router"
+import { use } from "react"
+import { Link, useNavigate } from "react-router"
 
 export const Nav = () => {
+    const navigate = useNavigate()
+    function handleLogout() {
+        navigate('/login')
+    }
     return (
         <nav
             className="flex flex-wrap items-center justify-between bg-gray-600 px-6 py-3"
@@ -45,6 +50,7 @@ export const Nav = () => {
                 <div>
                     <button
                         className="mt-4 inline-block rounded border border-gray-400 px-4 py-2 text-sm leading-none text-gray-300 hover:bg-gray-300 hover:text-gray-800 lg:mt-0"
+                        onClick={handleLogout}
                     >
                         Logout
                     </button>

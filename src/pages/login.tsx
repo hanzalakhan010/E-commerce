@@ -1,5 +1,5 @@
 import type { FormEvent } from "react"
-import { useNavigate } from "react-router"
+import { Link, useNavigate } from "react-router"
 
 export const Login = () => {
     const navigate = useNavigate()
@@ -80,11 +80,10 @@ export const Login = () => {
                         {/* <!-- Additional Link --> */}
                         <p className="mt-6 text-center text-sm text-gray-500">
                             Already have an account?
-                            <a
-                                href="#"
+                            <Link
+                                to="/signup"
                                 className="font-medium text-indigo-600 hover:text-indigo-500"
-                            >Sign in</a
-                            >
+                            >Sign in</Link>
                         </p>
                     </div>
                 </div>

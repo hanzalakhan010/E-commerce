@@ -3,9 +3,10 @@ import { type AppDispatch, type RootState } from "../app/store"
 import { ProductCard } from "../components/ProductCard"
 import { useEffect } from "react"
 import { loadProduts } from "../features/products"
+import { Loader } from "lucide-react"
 
 export const Home = () => {
-    const { products } = useSelector((state: RootState) => state.products)
+    const { products,loading } = useSelector((state: RootState) => state.products)
     const dispatch = useDispatch<AppDispatch>()
     useEffect(() => {
         dispatch(loadProduts())
@@ -25,6 +26,8 @@ export const Home = () => {
                     </h2>
                 </div>
             </div>
+            {loading && <Loader className="animate-spin"></Loader>}
+
             {products.map((product) => (
                 <ProductCard product={product} />
             ))}

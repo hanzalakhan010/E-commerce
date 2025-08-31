@@ -3,10 +3,11 @@ import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router"
 import { type AppDispatch, type RootState } from "../app/store"
 import { loadProduts } from "../features/products"
+import { Loader } from "lucide-react"
 
 export const ProductView = () => {
     const { id } = useParams()
-    const { products } = useSelector((state: RootState) => state.products)
+    const { products, loading } = useSelector((state: RootState) => state.products)
     const product = products.find((p) => p.id == Number(id))
     const dispatch = useDispatch<AppDispatch>()
 
@@ -30,7 +31,7 @@ export const ProductView = () => {
                     </h2>
                 </div>
             </div>
-
+            {loading && <Loader className="animate-spin"></Loader>}
             <div className="container mx-auto max-w-6xl p-6">
                 <div
                     className="flex flex-col overflow-hidden rounded-lg border border-green-200 bg-white lg:flex-row"
