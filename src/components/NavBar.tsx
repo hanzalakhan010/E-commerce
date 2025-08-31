@@ -1,4 +1,3 @@
-import { use } from "react"
 import { Link, useNavigate } from "react-router"
 
 export const Nav = () => {
